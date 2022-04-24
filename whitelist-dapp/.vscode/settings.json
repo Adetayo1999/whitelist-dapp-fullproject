@@ -1,0 +1,15 @@
+{
+  "eslint.alwaysShowStatus": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact"
+  ],
+  "eslint.options": {
+    "overrideConfigFile": "./whitelist-dapp/.eslintrc.json"
+  }
+}
