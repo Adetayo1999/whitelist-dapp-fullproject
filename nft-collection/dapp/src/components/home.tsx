@@ -264,8 +264,11 @@ function Home() {
       );
     }
     return (
-      <button type="button" className="" onClick={connectWallet}>
-        Connect Wallet
+      <button
+        type="button"
+        className="bg-sky-500 p-3 rounded text-sm text-sky-50 mr-4"
+        onClick={connectWallet}>
+        CONNECT WALLET 🚀
       </button>
     );
   };
