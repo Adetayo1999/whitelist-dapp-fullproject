@@ -32,12 +32,12 @@ function Home() {
     try {
       const provider = await getProviderORSigner();
       const whitelistContract = new Contract(
-        '0x169033FDbD8A87B5629d50828Ec3AA758E0B3De1',
+        '0x65eEACc74dC5B132fB28BF32A966903E48d9e51F',
         ABI,
         provider
       );
       const NumOfWhitelisted =
-        await whitelistContract.numOfWhiteListedAddress();
+        await whitelistContract.numAddressesWhitelisted();
       setNumberOfWhiteListed(NumOfWhitelisted);
     } catch (error) {
       // eslint-disable-next-line
@@ -50,7 +50,7 @@ function Home() {
       const signer = await getProviderORSigner(true);
 
       const whitelistContract = new Contract(
-        '0x169033FDbD8A87B5629d50828Ec3AA758E0B3De1',
+        '0x65eEACc74dC5B132fB28BF32A966903E48d9e51F',
         ABI,
         signer
       );
@@ -70,11 +70,11 @@ function Home() {
       const signer = await getProviderORSigner(true);
 
       const whitelistContract = new Contract(
-        '0x169033FDbD8A87B5629d50828Ec3AA758E0B3De1',
+        '0x65eEACc74dC5B132fB28BF32A966903E48d9e51F',
         ABI,
         signer
       );
-      const tx = await whitelistContract.addAddressToWhiteList();
+      const tx = await whitelistContract.addAddressToWhitelist();
       setLoading(true);
       await tx.wait();
       setLoading(false);

@@ -3,21 +3,21 @@ pragma solidity ^0.8.0;
 
 contract WhiteList {
 
-   uint8 public  maxWhiteListAddress;
+   uint8 public  maxWhitelistedAddress;
 
-   uint8 public numOfWhiteListedAddress;
+   uint8 public numAddressesWhitelisted;
 
    mapping(address => bool) public  whitelistedAddresses;
 
-   constructor(uint8 _maxWhiteListAddress){
-       maxWhiteListAddress = _maxWhiteListAddress;
+   constructor(uint8 _maxWhitelistAddresses){
+       maxWhitelistedAddress = _maxWhitelistAddresses;
    }
 
-   function addAddressToWhiteList() public {
+   function addAddressToWhitelist() public {
        require(msg.sender != address(0), "Invalid Address");
-       require(numOfWhiteListedAddress < maxWhiteListAddress, "Whitelist full");
+       require(numAddressesWhitelisted < maxWhitelistedAddress, "Whitelist full");
        require(!whitelistedAddresses[msg.sender], "Address whitelisted");
-       numOfWhiteListedAddress += 1;
+       numAddressesWhitelisted += 1;
        whitelistedAddresses[msg.sender] = true;
    }
 

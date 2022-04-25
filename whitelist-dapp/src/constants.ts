@@ -3,7 +3,7 @@ export const ABI = [
     inputs: [
       {
         internalType: 'uint8',
-        name: '_maxWhiteListAddress',
+        name: '_maxWhitelistAddresses',
         type: 'uint8',
       },
     ],
@@ -12,14 +12,14 @@ export const ABI = [
   },
   {
     inputs: [],
-    name: 'addAddressToWhiteList',
+    name: 'addAddressToWhitelist',
     outputs: [],
     stateMutability: 'nonpayable',
     type: 'function',
   },
   {
     inputs: [],
-    name: 'maxWhiteListAddress',
+    name: 'maxWhitelistedAddress',
     outputs: [
       {
         internalType: 'uint8',
@@ -32,7 +32,7 @@ export const ABI = [
   },
   {
     inputs: [],
-    name: 'numOfWhiteListedAddress',
+    name: 'numAddressesWhitelisted',
     outputs: [
       {
         internalType: 'uint8',
